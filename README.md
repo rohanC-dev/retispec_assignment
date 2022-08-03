@@ -22,6 +22,6 @@ Prerequisites: You must have docker installed on your machine
     </ul>
 </ol>
 
-You could also use some other tool to test the endpoints ofcourse (e.g., Postman).
+You could also use some other tool to test the endpoints of course (e.g., Postman).
 
 
