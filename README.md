@@ -15,7 +15,7 @@ Prerequisites: You must have docker installed on your machine
     <li>Patients API on <b>localhost:8002</b></li>
     <li>Acquisitions API on <b>localhost:8003</b></li>
   </ul>
-  <li>To test the endpoints, navigate to /docs for each API, respectively:</li>
+  <li>To test the endpoints, navigate to <b>/docs</b> for each API, respectively:</li>
     <ul>
       <li>So for the Patients API, navigate to <b>localhost:8002/docs</b></li>
       <li>For the Acquisitions API, navigate to <b>localhost:8003/docs</b></li>
