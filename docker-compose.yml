@@ -1,0 +1,58 @@
+version: "3.3"
+
+services:
+  # MySQL
+
+  db:
+    image: "rohancdev/retispec:db"
+    container_name: "db"
+
+    build: ./docker/mysql
+
+    restart: always
+    tty: true
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
+      - ./docker/mysql/conf.d:/etc/mysql/conf.d
+      - ./log/mysql:/var/log/mysql
+    networks:
+      - local-net
+
+  patients_api:
+    image: "rohancdev/retispec:patients_api"
+    links:
+      - db
+    container_name: "patients_api"
+
+    build: ./docker/patients_api
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./code:/usr/src/server
+    networks:
+      - local-net
+
+  acquisitions_api:
+    image: "rohancdev/retispec:acquisitions_api"
+    links:
+      - db
+    container_name: "acquisitions_api"
+
+    build: ./docker/acquisitions_api
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./code:/usr/src/server
+    networks:
+      - local-net
+
+networks:
+  local-net:
+    driver: bridge
