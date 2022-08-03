@@ -12,16 +12,16 @@ Prerequisites: You must have docker installed on your machine
   <li><b>cd</b> into the repository and run the command  docker-compose up -d --build </li>
   <li>After it's finished building you should be able to access the different APIs:</li>
   <ul>
-    <li>Patients API on localhost:8002</li>
-    <li>Acquisitions API on localhost:8003</li>
-    <li>MySQL Database on localhost:3306</li>
+    <li>Patients API on <b>localhost:8002</b></li>
+    <li>Acquisitions API on <b>localhost:8003</b></li>
+    <li>MySQL Database on <b>localhost:3306</b></li>
   </ul>
 </ol>
 
 To test the endpoints, navigate to /docs for each API, respectively:
 <ul>
-    <li>So for the Patients API, navigate to localhost:8002/docs</li>
-    <li>for the Acquisitions API, navigate to localhost:8003/docs</li>
+    <li>So for the Patients API, navigate to <b>localhost:8002/docs</b></li>
+    <li>for the Acquisitions API, navigate to <b>localhost:8003/docs</b></li>
 </ul>
 
 
