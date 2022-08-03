@@ -9,7 +9,7 @@ Prerequisites: You must have docker installed on your machine
 <ol>
   <li>Navigate to https://github.com/rohanC-dev/hospital-management-system</li>
   <li>Clone this repository on your local machine with git clone</li>
-  <li>**cd** into the repository and run the command  docker-compose up -d --build </li>
+  <li><b>cd</b> into the repository and run the command  docker-compose up -d --build </li>
   <li>After it's finished building you should be able to access the different APIs:</li>
   <ul>
     <li>Patients API on localhost:8002</li>
