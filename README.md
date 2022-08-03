@@ -16,13 +16,12 @@ Prerequisites: You must have docker installed on your machine
     <li>Acquisitions API on <b>localhost:8003</b></li>
     <li>MySQL Database on <b>localhost:3306</b></li>
   </ul>
+  <li>To test the endpoints, navigate to /docs for each API, respectively:</li>
+    <ul>
+      <li>So for the Patients API, navigate to <b>localhost:8002/docs</b></li>
+      <li>For the Acquisitions API, navigate to <b>localhost:8003/docs</b></li>
+    </ul>
 </ol>
-
-To test the endpoints, navigate to /docs for each API, respectively:
-<ul>
-    <li>So for the Patients API, navigate to <b>localhost:8002/docs</b></li>
-    <li>For the Acquisitions API, navigate to <b>localhost:8003/docs</b></li>
-</ul>
 
 
 
