@@ -25,6 +25,8 @@ Prerequisites: You must have docker installed on your machine
 
 You could also use some other tool to test the endpoints of course (e.g., Postman).
 
+At the moment, the download image feature only works with .jpg, but more could be added in the future.
+
 The database intially has this data when the project is first built, you made need this to test certain endpoints if you will not create any records first:
 
 <img src="https://i.imgur.com/ivLyBPY.pngY"/> <img src="https://i.imgur.com/dxXADyN.png"/>
