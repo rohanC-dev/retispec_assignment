@@ -20,7 +20,7 @@ app.add_middleware(
 )
 
 
-@app.post("/acquisition")
+@app.post("/acquisition") # creating a new acquisition
 async def create_acq(patient_id: int, eye_type: str, sitename: str, date_taken: datetime.date, operator_name: str, image: UploadFile = File(...)):
     acquisition = AcquisitionTable()
     acquisition.patient_id = patient_id
@@ -47,12 +47,12 @@ async def create_acq(patient_id: int, eye_type: str, sitename: str, date_taken: 
     os.rename(image.filename, "image_" + str(acquisition_id) + str(extension))
     return {"Success": True, "message": f"Successfuly uploaded {image.filename}"}
 
-@app.get("/acquisitions/{patient_id}")
+@app.get("/acquisitions/{patient_id}") # listing all acquisitions for a particular patient
 def list_acq(patient_id: int): #select * from acquisition inner join patient on acquisition.patient_id = patient.id;
     return db_session.query(AcquisitionTable).join(PatientTable).filter(AcquisitionTable.patient_id == patient_id).all()
 
 
-@app.delete("/acquisition/{acquisition_id}")
+@app.delete("/acquisition/{acquisition_id}") # deleting an acquisition
 def delete_acq(acquisition_id: int):
     acquisition = db_session.query(AcquisitionTable).filter(AcquisitionTable.id == acquisition_id).first()
 
@@ -65,7 +65,7 @@ def delete_acq(acquisition_id: int):
     return {"Success": True}
 
 
-@app.get("/acquisition/{acquisition_id}")
+@app.get("/acquisition/{acquisition_id}") # downloading an image
 def download_img(acquisition_id: int):
     file_name = "image_" + str(acquisition_id) + ".jpg"
     file_path = "/usr/src/server/" + file_name
