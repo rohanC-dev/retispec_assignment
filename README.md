@@ -19,6 +19,7 @@ Prerequisites: You must have docker installed on your machine
     <ul>
       <li>So for the Patients API, navigate to <b>localhost:8002/docs</b></li>
       <li>For the Acquisitions API, navigate to <b>localhost:8003/docs</b></li>
+      <li>Then you can open the dropdowns, click "Try it out", add the parameters, and then click "Execute" and see the response sent back</li>
     </ul>
 </ol>
 
