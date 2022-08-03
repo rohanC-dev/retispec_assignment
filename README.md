@@ -8,7 +8,7 @@ Instructions for running the project:
 Prerequisites: You must have docker installed on your machine
 <ol>
   <li>Navigate to https://github.com/rohanC-dev/retispec_assignment</li>
-  <li>Clone this repository on your local machine with git clone</li>
+  <li>Clone this repository on your local machine with <b>git clone</b></li>
   <li><b>cd</b> into the repository and run the command  <b>docker-compose up -d --build</b> </li>
   <li>After it's finished building you should be able to access the different APIs:</li>
   <ul>
